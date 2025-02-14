@@ -3,19 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Weather App</title>
+    <title>Weather Pro - Live Weather App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Live Weather App</h1>
+        <header>
+            <h1>Weather Pro</h1>
+            <div class="subscription-status">
+                <span class="free-tag">Free Version</span>
+                <button id="upgrade-btn" class="upgrade-btn">Upgrade to Pro</button>
+            </div>
+        </header>
+
+        <!-- Ad Space -->
+        <div class="ad-space">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
         <div class="search-box">
             <input type="text" id="city-input" placeholder="Enter city name">
             <button id="search-btn">
                 <i class="fas fa-search"></i>
             </button>
         </div>
+
         <div class="weather-info">
             <div class="city-name"></div>
             <div class="weather-icon">
@@ -25,7 +48,113 @@
             <div class="description"></div>
             <div class="details"></div>
         </div>
+
+        <!-- Premium Features (initially hidden) -->
+        <div class="premium-features">
+            <h2>Premium Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card locked">
+                    <i class="fas fa-clock"></i>
+                    <h3>7-Day Forecast</h3>
+                    <p>Get detailed weather forecasts for the next 7 days</p>
+                </div>
+                <div class="feature-card locked">
+                    <i class="fas fa-bell"></i>
+                    <h3>Weather Alerts</h3>
+                    <p>Receive real-time weather alerts and notifications</p>
+                </div>
+                <div class="feature-card locked">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Interactive Maps</h3>
+                    <p>View weather patterns on interactive maps</p>
+                </div>
+                <div class="feature-card locked">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Historical Data</h3>
+                    <p>Access historical weather data and trends</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscription Modal -->
+        <div id="subscription-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Upgrade to Weather Pro</h2>
+                <div class="pricing-plans">
+                    <div class="plan">
+                        <h3>Monthly</h3>
+                        <div class="price">$4.99<span>/month</span></div>
+                        <button class="subscribe-btn" data-plan="monthly">Subscribe</button>
+                    </div>
+                    <div class="plan popular">
+                        <h3>Annual</h3>
+                        <div class="price">$49.99<span>/year</span></div>
+                        <div class="savings">Save 17%</div>
+                        <button class="subscribe-btn" data-plan="annual">Subscribe</button>
+                    </div>
+                </div>
+                <div class="features-list">
+                    <h3>All Premium Features Include:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 7-Day Detailed Forecast</li>
+                        <li><i class="fas fa-check"></i> Real-time Weather Alerts</li>
+                        <li><i class="fas fa-check"></i> Interactive Weather Maps</li>
+                        <li><i class="fas fa-check"></i> Historical Weather Data</li>
+                        <li><i class="fas fa-check"></i> Ad-Free Experience</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Mobile App Promotion -->
+    <div class="app-promotion">
+        <div class="app-info">
+            <h2>Get Our Mobile App</h2>
+            <p>Download Weather Pro for iOS and Android</p>
+            <div class="app-buttons">
+                <a href="#" class="app-store-btn">
+                    <i class="fab fa-apple"></i> App Store
+                </a>
+                <a href="#" class="play-store-btn">
+                    <i class="fab fa-google-play"></i> Play Store
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Weather Pro</h3>
+                <p>Your trusted source for accurate weather information</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Premium Features</a></li>
+                    <li><a href="#">API Access</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Weather Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+    <script src="premium.js"></script>
 </body>
 </html>
